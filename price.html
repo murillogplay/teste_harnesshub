@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Harness Hub - Preços</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #2c003e;
+        color: #ffffff;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+      header {
+        background-color: #4a006b;
+        padding: 20px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      }
+      nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+      }
+      nav a {
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: bold;
+        transition: color 0.3s;
+      }
+      nav a:hover {
+        color: #e0e0e0;
+        text-decoration: underline;
+      }
+      .container {
+        max-width: 1024px;
+        margin: 40px auto;
+        background: #4a006b;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        text-align: center;
+        flex: 1;
+      }
+      h1 {
+        color: #ffffff;
+      }
+      .pricing-grid {
+        display: flex;
+        justify-content: center;
+        gap: 24px;
+        flex-wrap: wrap;
+        margin-top: 30px;
+      }
+      .plan-card {
+        background-color: #38005a;
+        border: 2px solid transparent;
+        border-radius: 12px;
+        padding: 30px 24px;
+        width: 260px;
+        text-align: center;
+        transition: transform 0.3s, border-color 0.3s;
+      }
+      .plan-card:hover {
+        transform: translateY(-6px);
+      }
+      .plan-card.featured {
+        border-color: #e040fb;
+        box-shadow: 0 0 20px rgba(224, 64, 251, 0.3);
+      }
+      .plan-name {
+        font-size: 22px;
+        font-weight: bold;
+        margin-bottom: 8px;
+        color: #e0e0e0;
+      }
+      .plan-price {
+        font-size: 42px;
+        font-weight: bold;
+        color: #ffffff;
+        margin: 16px 0 4px;
+      }
+      .plan-price span {
+        font-size: 18px;
+        font-weight: normal;
+        color: #b0b0b0;
+      }
+      .plan-desc {
+        font-size: 14px;
+        color: #b0b0b0;
+        margin-bottom: 20px;
+      }
+      .plan-features {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 24px;
+        text-align: left;
+      }
+      .plan-features li {
+        padding: 6px 0;
+        font-size: 14px;
+        color: #d0d0d0;
+        border-bottom: 1px solid rgba(255,255,255,0.07);
+      }
+      .plan-features li::before {
+        content: "✓ ";
+        color: #e040fb;
+        font-weight: bold;
+      }
+      .btn-plan {
+        display: inline-block;
+        padding: 12px 28px;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        background-color: #e040fb;
+        color: #ffffff;
+        border: none;
+        border-radius: 6px;
+        transition: background-color 0.3s;
+        text-decoration: none;
+      }
+      .btn-plan:hover {
+        background-color: #c820e0;
+      }
+      .btn-plan.outline {
+        background-color: transparent;
+        border: 2px solid #e040fb;
+        color: #e040fb;
+      }
+      .btn-plan.outline:hover {
+        background-color: #e040fb;
+        color: #ffffff;
+      }
+      footer {
+        margin-top: auto;
+        text-align: center;
+        font-size: 14px;
+        padding: 20px;
+      }
+      footer .links {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        align-items: center;
+      }
+      footer a {
+        color: #ffffff;
+        text-decoration: none;
+        background-color: #28a745;
+        padding: 5px 10px;
+        border-radius: 4px;
+      }
+      footer a:hover {
+        text-decoration: underline;
+        background-color: #218838;
+      }
+      footer .github-link {
+        background-color: #6e40c9;
+      }
+      footer .github-link:hover {
+        background-color: #5530a0;
+      }
+      footer .facebook-link {
+        background-color: #1877f2;
+      }
+      footer .facebook-link:hover {
+        background-color: #1464c9;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="price.html">Price</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="container" id="price">
+      <h1>Escolha seu Plano</h1>
+      <p style="color: #b0b0b0; margin-top: 8px;">
+        Planos flexíveis para impulsionar seus projetos com o Harness Hub.
+      </p>
+
+      <div class="pricing-grid">
+
+        <!-- PLANO BÁSICO -->
+        <div class="plan-card">
+          <div class="plan-name">Básico</div>
+          <div class="plan-price">R$ 29,99<span>/mês</span></div>
+          <div class="plan-desc">Ideal para quem está começando</div>
+          <ul class="plan-features">
+            <li>1 projeto ativo</li>
+            <li>5 GB de armazenamento</li>
+            <li>Suporte por e-mail</li>
+            <li>Templates básicos</li>
+          </ul>
+          <a href="#" class="btn-plan outline" onclick="alert('Plano Básico selecionado!')">Assinar</a>
+        </div>
+
+        <!-- PLANO PRO (DESTAQUE) -->
+        <div class="plan-card featured">
+          <div class="plan-name" style="color: #e040fb;">⭐ Popular</div>
+          <div class="plan-price">R$ 49,99<span>/mês</span></div>
+          <div class="plan-desc">Para equipes em crescimento</div>
+          <ul class="plan-features">
+            <li>5 projetos ativos</li>
+            <li>25 GB de armazenamento</li>
+            <li>Suporte prioritário</li>
+            <li>Templates avançados</li>
+            <li>Integrações com CI/CD</li>
+          </ul>
+          <a href="#" class="btn-plan" onclick="alert('Plano Pro selecionado!')">Assinar</a>
+        </div>
+
+        <!-- PLANO ENTERPRISE -->
+        <div class="plan-card">
+          <div class="plan-name">Enterprise</div>
+          <div class="plan-price">R$ 99,99<span>/mês</span></div>
+          <div class="plan-desc">Para grandes equipes e empresas</div>
+          <ul class="plan-features">
+            <li>Projetos ilimitados</li>
+            <li>100 GB de armazenamento</li>
+            <li>Suporte dedicado 24/7</li>
+            <li>Templates premium</li>
+            <li>Integrações ilimitadas</li>
+            <li>SLA garantido</li>
+          </ul>
+          <a href="#" class="btn-plan outline" onclick="alert('Plano Enterprise selecionado!')">Assinar</a>
+        </div>
+
+      </div>
+    </div>
+
+    <footer>
+      <div class="links">
+        <a href="https://www.google.com" target="_blank" rel="noopener noreferrer">Visite o Google</a>
+        <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="github-link">Visite o GitHub</a>
+        <a href="https://www.facebook.com/harnesshub" target="_blank" rel="noopener noreferrer" class="facebook-link">Visite o Facebook</a>
+      </div>
+    </footer>
+  </body>
+</html>
