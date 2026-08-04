@@ -1,6 +1,6 @@
 #!/bin/bash
-# Teste de regressão: valida se existem pelo menos 3 links do Facebook
-# (incluindo o existente e os adicionados) com fundo azul (#1877f2) e letra branca
+# Teste de regressão: valida se existe exatamente 1 link do Facebook
+# apontando para a página principal, com fundo azul (#1877f2) e letra branca
 
 HTML_FILE="/workspace/repo/index.html"
 
@@ -12,10 +12,10 @@ fi
 # Conta quantos links apontam para facebook.com no HTML (com ou sem www)
 FACEBOOK_LINKS_COUNT=$(grep -c 'facebook\.com' "$HTML_FILE")
 
-if [ "$FACEBOOK_LINKS_COUNT" -ge 3 ]; then
-    echo "PASS: Existem $FACEBOOK_LINKS_COUNT links do Facebook (mínimo esperado: 3)"
+if [ "$FACEBOOK_LINKS_COUNT" -eq 1 ]; then
+    echo "PASS: Existe exatamente $FACEBOOK_LINKS_COUNT link do Facebook"
 else
-    echo "FAIL: Existem apenas $FACEBOOK_LINKS_COUNT link(s) do Facebook (esperado: pelo menos 3)"
+    echo "FAIL: Existem $FACEBOOK_LINKS_COUNT link(s) do Facebook (esperado: 1)"
     exit 1
 fi
 
